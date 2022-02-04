@@ -1,9 +1,9 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
-import { Button, Props } from '../../src/components/Button';
 import { action } from '@storybook/addon-actions';
+import { Button, Props } from '../../src/components/Button';
 
-export const meta: Meta = {
+const meta: Meta = {
   title: 'Components/Button',
   component: Button,
   argTypes: {
@@ -13,6 +13,9 @@ export const meta: Meta = {
     },
   },
 };
+
+// IMPORTANT: do not export const meta or storybook will yell at you and not display your component!
+export default meta;
 
 const Template: Story<Props> = (args) => <Button {...args} />;
 
