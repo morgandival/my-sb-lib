@@ -11,6 +11,9 @@ const meta: Meta = {
     children: {
       defaultValue: 'Default text',
     },
+    variant: {
+      defaultValue: 'primary',
+    },
   },
 };
 
