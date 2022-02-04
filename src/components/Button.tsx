@@ -1,10 +1,13 @@
 import React, { HTMLAttributes, ReactNode } from 'react';
 
 export interface Props extends HTMLAttributes<HTMLButtonElement> {
+  /** Button text */
   children: ReactNode;
+  /** Select an option */
   variant: 'primary' | 'secondary';
 }
 
+/** This is a special button!!! */
 export const Button = ({ children, variant = 'primary', ...props }: Props) => {
   return (
     <button
