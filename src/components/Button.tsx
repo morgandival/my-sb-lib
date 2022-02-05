@@ -1,4 +1,4 @@
-import React, { HTMLAttributes, ReactNode } from 'react';
+import React, { FC, HTMLAttributes, ReactNode } from 'react';
 
 export interface Props extends HTMLAttributes<HTMLButtonElement> {
   /** Button text */
@@ -8,7 +8,11 @@ export interface Props extends HTMLAttributes<HTMLButtonElement> {
 }
 
 /** This is a special button!!! */
-export const Button = ({ children, variant = 'primary', ...props }: Props) => {
+export const Button: FC<Props> = ({
+  children,
+  variant = 'primary',
+  ...props
+}: Props) => {
   return (
     <button
       {...props}
