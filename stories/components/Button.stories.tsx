@@ -9,12 +9,12 @@ const meta: Meta = {
   argTypes: {
     onClick: { action: 'clicked' },
     children: {
-      defaultValue: 'Default text',
+      defaultValue: 'Default text'
     },
     variant: {
-      defaultValue: 'primary',
-    },
-  },
+      defaultValue: 'primary'
+    }
+  }
 };
 
 // IMPORTANT: do not export const meta or storybook will yell at you and not display your component!
@@ -28,5 +28,5 @@ export const Secondary = Template.bind({});
 Secondary.args = {
   variant: 'secondary',
   children: 'I am secondary',
-  onClick: action('secondary click'),
+  onClick: action('secondary click')
 };
